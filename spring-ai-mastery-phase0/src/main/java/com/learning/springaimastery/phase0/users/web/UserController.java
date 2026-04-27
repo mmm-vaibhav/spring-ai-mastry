@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.learning.springaimastery.phase0.users.domain.User;
 import com.learning.springaimastery.phase0.users.service.UserService;
+import com.learning.springaimastery.phase0.users.web.dto.UserDTO;
 import com.learning.springaimastery.phase0.util.AppConstants;
 
 import jakarta.validation.Valid;
@@ -21,17 +22,20 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping(AppConstants.BASE_URL)
 public class UserController {
 	
+	
 	private final UserService userService;
 	
 	@GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
-
-    @PostMapping
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+	
+	@PostMapping
+    public ResponseEntity<User> createUser(@Valid @RequestBody UserDTO user) {
         User saved = userService.createUser(user);
         return ResponseEntity.ok(saved);
     }
+	
+	
 
 }

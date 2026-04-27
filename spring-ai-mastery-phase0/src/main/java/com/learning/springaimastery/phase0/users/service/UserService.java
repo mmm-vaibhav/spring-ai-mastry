@@ -7,8 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.learning.springaimastery.phase0.users.domain.User;
 import com.learning.springaimastery.phase0.users.repo.UserRepository;
+import com.learning.springaimastery.phase0.users.web.dto.UserDTO;
 
 import lombok.RequiredArgsConstructor;
+
 
 
 @Service
@@ -18,13 +20,16 @@ public class UserService {
 	
 	private final UserRepository userRepository;
 	
-	
 	public List<User> getAllUsers() {
         return userRepository.findAll();
     }
-
-    @Transactional
-    public User createUser(User user) {
+	
+	@Transactional
+    public User createUser(UserDTO userdto) {
+    	User user = new User();
+    	user.setName(userdto.name());
+    	user.setEmail(userdto.email());
         return userRepository.save(user);
     }
+
 }
