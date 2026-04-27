@@ -1,10 +1,10 @@
-package com.aiprac.users.repo;
+package com.learning.springaimastery.phase0.users.repo;
 
 import java.io.Serializable;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.aiprac.users.domain.User;
+import com.learning.springaimastery.phase0.users.domain.User;
 
 public interface UserRepository extends JpaRepository<User, Serializable>{
 

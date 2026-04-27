@@ -1,4 +1,4 @@
-package com.aiprac.users.domain;
+package com.learning.springaimastery.phase0.users.domain;
 
 import java.util.Objects;
 

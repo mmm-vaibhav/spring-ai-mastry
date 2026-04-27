@@ -1,4 +1,4 @@
-package com.aiprac.users.ui;
+package com.learning.springaimastery.phase0.users.web;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aiprac.users.domain.User;
-import com.aiprac.users.service.UserService;
-import com.aiprac.util.AppConstants;
+import com.learning.springaimastery.phase0.users.domain.User;
+import com.learning.springaimastery.phase0.users.service.UserService;
+import com.learning.springaimastery.phase0.util.AppConstants;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
